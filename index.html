@@ -12,9 +12,16 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background: linear-gradient(135deg,#4a0033,#ff4da6);
 color:white;
 text-align:center;
+
+/* Luxury Pink + Subtle Flower */
+background:
+linear-gradient(135deg,#4a0033,#ff4da6),
+url("https://www.transparenttextures.com/patterns/flowers.png");
+
+background-blend-mode:soft-light;
+background-size:cover;
 }
 
 /* NAVBAR */
@@ -59,8 +66,15 @@ text-decoration:none;
 }
 
 /* SECTION */
-.section{padding:40px 20px;}
+.section{
+padding:40px 20px;
+background:rgba(255,255,255,0.08);
+margin:20px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
 
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -69,8 +83,12 @@ max-width:900px;
 margin:auto;
 }
 
-.gallery img{width:100%;border-radius:12px;}
+.gallery img{
+width:100%;
+border-radius:12px;
+}
 
+/* CARD */
 .card{
 background:white;
 color:black;
@@ -84,10 +102,10 @@ margin:20px auto;
 .review{
 background:white;
 color:black;
-padding:20px;
-border-radius:15px;
+padding:15px;
+border-radius:12px;
 max-width:500px;
-margin:15px auto;
+margin:10px auto;
 }
 
 /* FORM */
@@ -100,7 +118,12 @@ border:none;
 }
 
 /* MAP */
-iframe{width:90%;height:250px;border:0;border-radius:10px;}
+iframe{
+width:90%;
+height:250px;
+border:0;
+border-radius:10px;
+}
 
 /* FLOAT */
 .whatsapp{
@@ -161,6 +184,7 @@ margin-top:20px;
 <img src="https://images.unsplash.com/photo-1559622214-f8a9850965bb">
 <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729">
 </div>
+
 </div>
 
 <div class="section">
@@ -171,6 +195,7 @@ margin-top:20px;
 2 Pound — ₹600<br>
 3 Pound — ₹900
 </div>
+
 </div>
 
 <div id="order" class="section">
@@ -212,8 +237,6 @@ margin-top:20px;
 📧 Info@cakekotha.in<br>
 📍 Siddheshwar Ekabbar, Howrah, West Bengal 711414
 </div>
-
-<a class="btn" href="#">Instagram</a>
 
 </div>
 

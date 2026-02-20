@@ -12,145 +12,101 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
+background: linear-gradient(135deg,#4a0033,#ff4da6);
 color:white;
-
-/* Luxury Background */
-background:
-linear-gradient(135deg,#2b0a1f,#5c0f3a,#8a1c55),
-url("https://www.transparenttextures.com/patterns/flowers.png");
-
-background-blend-mode:overlay;
-background-size:cover;
-background-attachment:fixed;
+text-align:center;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
-background:rgba(0,0,0,0.3);
-padding:12px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 20px;
+background:rgba(0,0,0,0.3);
 position:sticky;
 top:0;
 }
 
 nav h2{
+color:gold;
 margin:0;
-color:#ffd700;
 }
 
 nav a{
-margin:0 10px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:500;
 }
 
 /* HERO */
-header{
-text-align:center;
-padding:70px 20px;
+.hero{
+padding:40px 20px;
 }
 
-.logo{
-width:130px;
+.profile{
+width:180px;
+height:180px;
 border-radius:50%;
-border:4px solid gold;
-margin-bottom:10px;
+border:5px solid gold;
+object-fit:cover;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
-/* Gold Button */
+h1{
+margin-top:20px;
+font-size:32px;
+}
+
+.tag{
+opacity:0.9;
+}
+
+/* BUTTONS */
 .btn{
 display:inline-block;
-padding:12px 22px;
-margin:8px;
+margin:10px;
+padding:14px 28px;
 border-radius:30px;
+background:gold;
+color:black;
+font-weight:bold;
 text-decoration:none;
-color:#fff;
-font-weight:600;
-background:linear-gradient(45deg,#d4af37,#f6e27a,#d4af37);
-box-shadow:0 4px 15px rgba(212,175,55,0.5);
 }
 
-/* Section */
+/* GALLERY */
 .section{
-padding:50px 20px;
-text-align:center;
-background:rgba(255,255,255,0.08);
-margin:30px;
-border-radius:20px;
-backdrop-filter:blur(10px);
+padding:40px 20px;
 }
 
-/* Gallery */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:15px;
-margin-top:20px;
+max-width:900px;
+margin:auto;
 }
 
-.card{
-background:rgba(255,255,255,0.1);
-padding:15px;
-border-radius:15px;
-}
-
-.card img{
+.gallery img{
 width:100%;
 border-radius:12px;
 }
 
-.price{
-color:gold;
-font-weight:bold;
-}
-
-/* Form */
-input,textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:8px;
-border:none;
-}
-
-button{
-background:gold;
+/* CARD */
+.card{
+background:white;
 color:black;
-padding:12px;
-border:none;
-border-radius:8px;
-width:100%;
-font-weight:bold;
-}
-
-/* Map */
-iframe{
-width:100%;
-height:250px;
-border:0;
-border-radius:10px;
-}
-
-/* Floating */
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
-}
-
-/* Footer */
-footer{
-text-align:center;
 padding:20px;
+border-radius:15px;
+max-width:350px;
+margin:20px auto;
+}
+
+footer{
+padding:15px;
 background:rgba(0,0,0,0.4);
+margin-top:20px;
 }
 
 </style>
@@ -158,135 +114,87 @@ background:rgba(0,0,0,0.4);
 
 <body>
 
+<!-- NAV -->
 <nav>
 <h2>Cake Kotha</h2>
 <div>
 <a href="#">Home</a>
-<a href="#cakes">Cakes</a>
-<a href="#order">Order</a>
-<a href="#contact">Contact</a>
+<a href="#">Cakes</a>
+<a href="#">Order</a>
+<a href="#">Contact</a>
 </div>
 </nav>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 
-<img src="https://i.imgur.com/7yUvePI.png" class="logo">
+<img src="FB_IMG_1771621484305.jpg" class="profile">
 
 <h1>Cake Kotha by Priyasmita</h1>
-<p>Delicious Homemade Cakes made with Love</p>
+<p class="tag">Delicious Homemade Cakes made with Love</p>
 
 <a class="btn" href="https://wa.me/918392091021">WhatsApp Order</a>
 <a class="btn" href="tel:8392091021">Call Now</a>
-<a class="btn" href="upi://pay?pa=7699315034-2@ibl&pn=Cake%20Kotha">Pay Now</a>
+<a class="btn" href="upi://pay?pa=7699315034-2@ibl">Pay Now</a>
 
-</header>
+</div>
 
-<section id="cakes" class="section">
-
-<h2>Our Cakes</h2>
+<!-- GALLERY -->
+<div class="section">
+<h2>Our Cake Gallery</h2>
 
 <div class="gallery">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1559622214-f8a9850965bb">
-<p class="price">From ₹300</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62">
-<p class="price">From ₹300</p>
-</div>
-
-<div class="card">
+<img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75">
 <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
-<p class="price">From ₹300</p>
-</div>
-
-<div class="card">
+<img src="https://images.unsplash.com/photo-1559622214-f8a9850965bb">
 <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729">
-<p class="price">From ₹300</p>
+
 </div>
+</div>
+
+<!-- PRICING -->
+<div class="section">
+<h2>Pricing</h2>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1599785209707-28c0b9a89c16">
-<p class="price">From ₹300</p>
+1 Pound — ₹300<br>
+2 Pound — ₹600<br>
+3 Pound — ₹900
 </div>
+
+</div>
+
+<!-- FLAVOURS -->
+<div class="section">
+<h2>Available Flavours</h2>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1542826438-7d7c7f0b6b0b">
-<p class="price">From ₹300</p>
+🍓 Strawberry<br>
+🍍 Pineapple<br>
+🍫 Chocolate<br>
+🍦 Vanilla<br>
+🍯 Butterscotch
 </div>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<h2>Price List</h2>
-
-<div class="card">
-<p>🎂 1 Pound — ₹300</p>
-<p>🎂 2 Pound — ₹600</p>
-<p>🎂 3 Pound — ₹900</p>
-</div>
-
-</section>
-
-<section id="order" class="section">
-
-<h2>Place Order</h2>
-
-<div class="card">
-
-<input type="text" id="name" placeholder="Your Name">
-<input type="text" id="phone" placeholder="Phone">
-<textarea id="details" placeholder="Cake Details"></textarea>
-
-<button onclick="sendWhatsApp()">Send Order</button>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Our Location</h2>
-
-<iframe src="https://maps.google.com/maps?q=Howrah&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-</section>
-
-<section id="contact" class="section">
-
+<!-- CONTACT -->
+<div class="section">
 <h2>Contact</h2>
 
 <div class="card">
-<p>📞 8392091021</p>
-<p>📞 7699315034</p>
-<p>📧 Info@cakekotha.in</p>
-<p>📍 Siddheshwar Ekabbar, Howrah, West Bengal 711414</p>
+📞 8392091021<br>
+📞 7699315034<br>
+📧 Info@cakekotha.in<br>
+📍 Siddheshwar Ekabbar, Howrah, West Bengal 711414
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2026 Cake Kotha by Priyasmita
 </footer>
-
-<a class="float" href="https://wa.me/918392091021">💬</a>
-
-<script>
-function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let details=document.getElementById("details").value;
-
-let msg=`Name: ${name}%0APhone: ${phone}%0AOrder: ${details}`;
-
-window.open(`https://wa.me/918392091021?text=${msg}`);
-}
-</script>
 
 </body>
 </html>

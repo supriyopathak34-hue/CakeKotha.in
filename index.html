@@ -28,22 +28,11 @@ position:sticky;
 top:0;
 }
 
-nav h2{
-color:gold;
-margin:0;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 10px;
-font-weight:500;
-}
+nav h2{color:gold;margin:0;}
+nav a{color:white;text-decoration:none;margin:0 10px;font-weight:500;}
 
 /* HERO */
-.hero{
-padding:40px 20px;
-}
+.hero{padding:40px 20px;}
 
 .profile{
 width:180px;
@@ -54,16 +43,10 @@ object-fit:cover;
 box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
-h1{
-margin-top:20px;
-font-size:32px;
-}
+h1{margin-top:20px;font-size:32px;}
+.tag{opacity:0.9;font-style:italic;}
 
-.tag{
-opacity:0.9;
-}
-
-/* BUTTONS */
+/* BUTTON */
 .btn{
 display:inline-block;
 margin:10px;
@@ -75,10 +58,8 @@ font-weight:bold;
 text-decoration:none;
 }
 
-/* GALLERY */
-.section{
-padding:40px 20px;
-}
+/* SECTION */
+.section{padding:40px 20px;}
 
 .gallery{
 display:grid;
@@ -88,12 +69,8 @@ max-width:900px;
 margin:auto;
 }
 
-.gallery img{
-width:100%;
-border-radius:12px;
-}
+.gallery img{width:100%;border-radius:12px;}
 
-/* CARD */
 .card{
 background:white;
 color:black;
@@ -101,6 +78,45 @@ padding:20px;
 border-radius:15px;
 max-width:350px;
 margin:20px auto;
+}
+
+/* REVIEW */
+.review{
+background:white;
+color:black;
+padding:20px;
+border-radius:15px;
+max-width:500px;
+margin:15px auto;
+}
+
+/* FORM */
+input,textarea{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:8px;
+border:none;
+}
+
+/* MAP */
+iframe{width:90%;height:250px;border:0;border-radius:10px;}
+
+/* FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:white;
+text-decoration:none;
 }
 
 footer{
@@ -114,24 +130,21 @@ margin-top:20px;
 
 <body>
 
-<!-- NAV -->
 <nav>
 <h2>Cake Kotha</h2>
 <div>
 <a href="#">Home</a>
-<a href="#">Cakes</a>
-<a href="#">Order</a>
-<a href="#">Contact</a>
+<a href="#order">Order</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
 
 <img src="FB_IMG_1771621484305.jpg" class="profile">
 
 <h1>Cake Kotha by Priyasmita</h1>
-<p class="tag">Delicious Homemade Cakes made with Love</p>
+<p class="tag">Made with love by Priyasmita ❤️</p>
 
 <a class="btn" href="https://wa.me/918392091021">WhatsApp Order</a>
 <a class="btn" href="tel:8392091021">Call Now</a>
@@ -139,21 +152,17 @@ margin-top:20px;
 
 </div>
 
-<!-- GALLERY -->
 <div class="section">
-<h2>Our Cake Gallery</h2>
+<h2>Our Cakes</h2>
 
 <div class="gallery">
-
 <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75">
 <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
 <img src="https://images.unsplash.com/photo-1559622214-f8a9850965bb">
 <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729">
-
 </div>
 </div>
 
-<!-- PRICING -->
 <div class="section">
 <h2>Pricing</h2>
 
@@ -162,25 +171,39 @@ margin-top:20px;
 2 Pound — ₹600<br>
 3 Pound — ₹900
 </div>
-
 </div>
 
-<!-- FLAVOURS -->
-<div class="section">
-<h2>Available Flavours</h2>
+<div id="order" class="section">
+<h2>Place Order</h2>
 
 <div class="card">
-🍓 Strawberry<br>
-🍍 Pineapple<br>
-🍫 Chocolate<br>
-🍦 Vanilla<br>
-🍯 Butterscotch
-</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Phone">
+<textarea id="details" placeholder="Cake Details"></textarea>
+
+<a class="btn" onclick="sendWhatsApp()">Send Order</a>
 
 </div>
+</div>
 
-<!-- CONTACT -->
 <div class="section">
+<h2>Customer Reviews</h2>
+
+<div class="review">⭐⭐⭐⭐⭐ Very tasty cake — Rahul</div>
+<div class="review">⭐⭐⭐⭐⭐ Beautiful design — Priya</div>
+<div class="review">⭐⭐⭐⭐⭐ Best homemade cake — Ankit</div>
+
+</div>
+
+<div class="section">
+<h2>Our Location</h2>
+
+<iframe src="https://maps.google.com/maps?q=Howrah&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+<div id="contact" class="section">
 <h2>Contact</h2>
 
 <div class="card">
@@ -190,11 +213,27 @@ margin-top:20px;
 📍 Siddheshwar Ekabbar, Howrah, West Bengal 711414
 </div>
 
+<a class="btn" href="#">Instagram</a>
+
 </div>
+
+<a class="whatsapp" href="https://wa.me/918392091021">💬</a>
 
 <footer>
 © 2026 Cake Kotha by Priyasmita
 </footer>
+
+<script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let details=document.getElementById("details").value;
+
+let msg=`Name: ${name}%0APhone: ${phone}%0AOrder: ${details}`;
+
+window.open(`https://wa.me/918392091021?text=${msg}`);
+}
+</script>
 
 </body>
 </html>
